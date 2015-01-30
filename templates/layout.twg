@@ -9,8 +9,15 @@
 </head>
 <body>
 
+<header>
+
+  <a href="" class="logo"></a>
+
+</header>
+
 
 <div class="container">
+
 
 <div class="row">
     <div class="col-lg-4">
