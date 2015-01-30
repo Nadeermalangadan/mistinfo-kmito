@@ -1,0 +1,16 @@
+{% macro menuElement(menu, level) %}
+    {% set level = level|default(0) %}
+    {% for menuitem in menu.getItems() %}
+        {% set description = menuitem.description() %}
+        <li class="{{ menuitem.getCss() }} {%if menuitem.isActive() %}active{% endif %}">
+			<a href="{{ menuitem.url() }}" title="{{ menuitem.title() }}">{{ menuitem.title() }}</a>
+		</li>
+		{% if not loop.last %}
+			<li class="divider"> | </li>
+		{% endif %}
+    {% endfor %}
+{% endmacro %}
+
+<ul class="nav navbar-nav">
+	{{ _self.menuElement(menu) }}
+</ul>

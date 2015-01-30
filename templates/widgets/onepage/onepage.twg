@@ -1,0 +1,20 @@
+<div class="content_block">
+    <h1 class="content_title" style="display: none !important;">{{ page.title }}</h1>
+    <div class="content_text">
+        {% if page.Images.count() > 0 %}
+            {% set img = page.Images.get()[0] %}
+                <a style="float: left; margin-right: 10px; margin-bottom: 10px;" title="{{ page.title }}" class="article_image gallery" rel="gallery" href="{{ img.getThumb('original') }}">
+                    <img style="border: 5px solid #F6DE73; box-shadow: 1px 1px 2px #262626;" alt="{{ page.title }}" title="{{ page.title }}" src="{{ img.getThumb('[180x180]') }}" />
+                </a>
+        {% endif %}
+        <p>{{ page.body|raw }}</p>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('.gallery').fancybox({
+            titlePosition: 'inside'
+        });
+    });
+</script>

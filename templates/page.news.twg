@@ -1,0 +1,24 @@
+<h1 class="page-title">Новини</h1>
+<div class="items-list">
+	{% for newsitem in news %}
+		<div class="item">
+			<div class="row">
+				{% if newsitem.Images.count() > 0%}
+					<div class="col-md-4">
+						{% set img = newsitem.Images.count()[0] %}	
+						<a class="preview" href="{{ newsitem.getUrl() }}" title="{{ newsitem.title }}" ><img src="{{ newsitem.Images.get()[0].getThumb('[185x212]') }}" alt="{{ newsitem.title }}" /></a>
+					</div>
+				{% endif %}
+				<div class="{% if newsitem.Images.count() > 0%}col-md-8{% else %}col-md-12{% endif %}">
+					<a class="title" title="{{ newsitem.title }}" href="{{ newsitem.getUrl() }}"><h3>{{ newsitem.title }}</h3></a>
+					<div class="description">
+						{{ newsitem.body|truncate(1000)|raw }}
+					</div>
+					<a class="read-more" href="{{ newsitem.getUrl() }}" title="{{ newsitem.title }}">Читати далі</a>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+	<div class="clearfix"></div>
+	{% include 'block.pagination' %}
+</div>

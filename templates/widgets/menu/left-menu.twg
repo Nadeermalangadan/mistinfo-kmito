@@ -1,0 +1,30 @@
+{% macro menuElement(menu, level) %}
+    {% set level = level|default(0) %}
+    {% for menuitem in menu.getItems() %}
+        {% set description = menuitem.description() %}
+		<div class="menu-item">
+			<div class="heading">
+				<h4 class="title">
+					<a {% if menuitem.getItems()|length > 0 %}data-toggle="collapse" data-parent="#accordion" href="#menu{{ menuitem.getMenuelement().id }}"{% else %}href="{{ menuitem.getUrl() }}"{% endif %}>
+						{{ menuitem.title() }}
+					</a>
+				</h4>
+			</div>
+			{% if menuitem.getItems()|length > 0 %}
+				<div id="menu{{ menuitem.getMenuelement().id }}" class="panel-collapse collapse">
+					<div class="body">
+						{% for submenu in menuitem.getItems() %}
+						<a href="{{ submenu.getUrl() }}" title="{{ submenu.title() }}">
+							{{ submenu.title() }}
+						</a>
+						{% endfor %}
+					</div>
+				</div>
+            {% endif %}
+		</div>
+    {% endfor %}
+{% endmacro %}
+
+<div class="vertical-menu" id="accordion">
+    {{ _self.menuElement(menu) }}
+</div>

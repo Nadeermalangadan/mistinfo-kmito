@@ -1,0 +1,31 @@
+<div>
+{% if category.depth ==0 %}<h1>{% tr %}Gallery{% endtr %}</h1>{% endif %}
+{% if categories|length > 0 %}
+	{% if category.depth >0 %}<h1>{{ category.title }}</h1>{% endif %}
+		{% for category in categories %}
+			{% if category.is_hidden == 0 %}
+				{% if category.cover %}
+					<div class="gallery-items clearfix">
+						<a href="{% url 'ComGallery.ShowGallery', { 'category' : category.Elements } %}">
+							<img src="{{ category.cover.getThumb('[100x100]') }}" alt="{{ category.title }}" title="{{ category.title }}" />
+						</a>
+				{% endif %}
+						<h3><a class="category-title" href="{% url 'ComGallery.ShowGallery', { 'category' : category.Elements } %}">{{ category.title }}</a></h3>
+					</div>
+			{% endif %}
+		{% endfor %}
+{% endif %}
+	{% if photos|length > 0 %}
+<h1>{{ category.title }}</h1>
+		<p>{{ category.description|raw }}</p>
+		{% for photo in photos %}
+		<div class="gallery-item">
+			<a rel="gallery" class="gallery" href="{{ photo.getThumb('original') }}">
+				<img src="{{ photo.getThumb('190x120') }}" alt="{{ photo.title }}" title="{{ photo.title }}" />
+			</a>
+		</div>
+		{% endfor %}
+		<div class="clearfix"></div>
+{% endif %}
+{% include 'block.pagination.twg' %}
+</div>

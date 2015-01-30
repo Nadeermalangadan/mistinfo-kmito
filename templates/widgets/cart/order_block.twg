@@ -1,0 +1,7 @@
+<div class="header-cart">
+    <a href="{% url 'ComEcommerce.Order' %}"><span class="b-cart"></span>Ваша корзина:</a>
+    <div class="content-cart">
+        <span class="simpleCart_quantity"> {{ cart.Products.count() }}</span>
+        шт. на сумму: <span class="">{{ cart.getSum() }} грн</span>
+    </div>
+</div>

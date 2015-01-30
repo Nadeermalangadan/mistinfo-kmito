@@ -1,0 +1,17 @@
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	<div class="carousel-inner">
+        {% for key, photo in photos %}
+		<div class="item{% if key == 0 %} active{% endif %}">
+			<img src="{{ photo.getThumb('185x325') }}" alt="{{ photo.description }}" title="{{ photo.description }}" />
+		</div>
+        {% endfor %}
+	</div>
+
+	<!-- Controls -->
+	<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+	</a>
+	<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+	</a>
+</div>

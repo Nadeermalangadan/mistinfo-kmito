@@ -1,0 +1,26 @@
+{% macro menuElement(menu, level) %}
+    {% set level = level|default(0) %}
+    {% for menuitem in menu.getItems() %}
+        {% set description = menuitem.description() %}
+        <li class="{%if menuitem.isActive() %}active{% endif %}{% if menuitem.getItems()|length > 0 %} dropdown{% endif %} {{ menuitem.getCss() }}">
+            <a {% if menuitem.getItems()|length > 0 %}class="dropdown-toggle" data-toggle="dropdown"{% endif %} href="{{ menuitem.getUrl() }}" title="{{ menuitem.title() }}">{{ menuitem.title() }}</a>
+            {% if menuitem.getItems()|length > 0 %}
+                <ul class="dropdown-menu">
+						{% for submenu in menuitem.getItems() %}
+							<li class="{%if menuitem.isActive() %}active{% endif %}{{ menuitem.getCss() }}">
+								<a href="{{ submenu.getUrl() }}" title="{{ submenu.title() }}">
+									{{ submenu.title() }}
+								</a>
+							</li>
+						{% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+{% endmacro %}
+
+<nav class="navbar navbar-main" role="navigation">
+	<ul class="nav navbar-nav">
+		{{ _self.menuElement(menu) }}
+	</ul>
+</nav>

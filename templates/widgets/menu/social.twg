@@ -1,0 +1,14 @@
+{% macro menuElement(menu, level) %}
+    {% set level = level|default(0) %}
+
+    {% for menuitem in menu.getItems() %}
+        {% set description = menuitem.description() %}
+        <li class="{{ menuitem.getCss() }}">
+            <a href="{{ menuitem.getUrl() }}" title="{{ menuitem.title() }}"></a>
+        </li>
+    {% endfor %}
+{% endmacro %}
+
+<ul class="list-unstyled pull-right">
+    {{ _self.menuElement(menu) }}
+</ul>

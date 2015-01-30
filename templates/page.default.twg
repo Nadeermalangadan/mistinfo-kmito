@@ -1,0 +1,31 @@
+<h1 class="page-title">{{ page.title }}</h1>
+<div class="page-body">
+	{% if page.Images.count() > 0 %}
+		{% set img = page.Images.get()[0] %}
+			<a title="{{ page.title }}" class="page-image gallery" rel="gallery" href="{{ img.getThumb('original') }}">
+				<img alt="{{ page.title }}" title="{{ page.title }}" src="{{ img.getThumb('[185x212]') }}" />
+			</a>
+	{% endif %}
+	{{ page.body|raw }}
+	{% if page.Images.count() > 1 %}
+		{% set images = page.Images.get() %}
+		<div class="row">
+			{% for img in images %}
+				{% if not loop.first %}
+					<div class="col-md-3">
+						<a class="gallery" rel="gallery" title="{{ page.title }}" href="{{ img.getThumb('original') }}">
+							<img data-src="{{ img.getThumb('[100x100]') }}" alt="{{ page.title }}" src="{{ img.getThumb('[100x100]') }}" />
+						</a>
+					</div>
+				{% endif %}
+			{% endfor %}
+		</div>
+	{% endif %}
+</div>
+<script>
+	$(document).ready(function(){
+		$('.gallery').fancybox({
+			titlePosition: 'inside'
+		});
+	});
+</script>

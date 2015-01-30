@@ -1,0 +1,30 @@
+<h1 class="page-title">Часто задавані питання</h1>
+<div class="page-body">
+	<div class="panel-group" id="faq-list">
+		{% for question in questions %}
+			  <div class="panel">
+				<div class="panel-heading">
+				  <h4 class="panel-title">
+					<a class="question" data-toggle="collapse" data-parent="#faq-list" href="#question{{ question.id }}">
+					  * {{ question.question }}
+					</a>
+				  </h4>
+				</div>
+				<div id="question{{ question.id }}" class="panel-collapse collapse answer">
+				  <div class="panel-body">
+					{{ question.answer|raw }}
+				  </div>
+				</div>
+			  </div>
+		{% endfor %}
+	</div>
+	<h2 class="page-title">{% tr %}Задати питання{% endtr %}</h2>
+    {{ newQuestionForm|raw }}
+{% if pageCount > 1 %}
+	<div class="pager">
+		{% for i in 1..pageCount %}
+			<a {% if pageCurrent == i %} href="{% url 'ComFaq.Default', { 'page' : i } %}" class="active"{% endif %} href="{% url 'ComFaq.Default', { 'page' : i } %}">{{ i }}</a>
+		{% endfor %}
+	</div>
+{% endif %}
+</div>

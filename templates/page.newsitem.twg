@@ -1,0 +1,34 @@
+<h1 class="page-title">{{ newsitem.title }}</h1>
+<div class="page-body">
+	<span>додано: {{ newsitem.created_at|date('d.m.Y') }}</span>
+	{% if newsitem.Images.count() > 0 %}
+		{% set img = newsitem.Images.get()[0] %}
+			<a title="{{ newsitem.title }}" class="gallery page-image" rel="gallery" href="{{ img.getThumb('original') }}">
+				<img alt="{{ newsitem.title }}" title="{{ newsitem.title }}" src="{{ img.getThumb('185x212') }}" />
+			</a>
+	{% endif %}
+	{{ newsitem.body|raw }}
+	{% if newsitem.Images.count() > 1 %}
+		{% set images = newsitem.Images.get() %}
+		<div class="row">
+			{% for image in images %}
+				{% if not loop.first %}
+					<div class="col-md-3">
+						<a href="{{ image.getThumb('original') }}" class="thumbnail gallery" rel="gallery" title="{{ newsitem.title }}">
+							<img src="{{ image.getThumb('[100x100]') }}" alt="{{ newsitem.title }}" />
+						</a>
+					</div>
+				{% endif %}
+		  {% endfor %}
+		</div>
+	{% endif %}
+	<div class="clearfix"></div>
+	<a class="link-general" href="{% url 'ComNews.AllNews' %}">повернутись до списку новин</a>
+</div>
+<script>
+	$(document).ready(function(){
+		$('.gallery').fancybox({
+			titlePosition: 'inside'
+		});
+	});
+</script>

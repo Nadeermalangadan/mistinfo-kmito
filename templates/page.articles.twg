@@ -1,0 +1,29 @@
+<h1 class="page-title">{% if category.depth == 0 %}Статті{% else %}{{ category.title }}{% endif %}</h1>
+
+<div class="items-list">
+	{% for article in articles %}
+		<div class="item">
+			<div class="row">
+				{% if article.Images.count() > 0%}
+					<div class="col-md-4">
+						{% set img = article.Images.count()[0] %}
+						<a class="preview" href="{% url 'ComArticles.ShowArticle', { 'url' : article.url } %}" title="{{ article.title }}" ><img src="{{ article.Images.get()[0].getThumb('[185x212]') }}" alt="{{ article.title }}" /></a>
+					</div>
+				{% endif %}
+				<div class="{% if article.Images.count() > 0%}col-md-8{% else %}col-md-12{% endif %}">
+					<a class="title" title="{{ article.title }}" href="{{ article.getUrl() }}"><h3>{{ article.title }}</h3></a>
+					<div class="description">
+						{% if not loop.first %}
+							{{ article.body|truncate(1000)|raw }}
+						{% else %}
+							{{ article.body|truncate(1000)|raw }}
+						{% endif %}
+					</div>
+					<a class="read-more" href="{% url 'ComArticles.ShowArticle', { 'url' : article.url } %}" title="{{ article.title }}">Читати далі</a>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+	<div class="clearfix"></div>
+	{% include 'block.pagination' %}
+</div>

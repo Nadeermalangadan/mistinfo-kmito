@@ -1,0 +1,65 @@
+﻿<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head profile="http://gmpg.org/xfn/11">
+    {% hook 'html_head_begin' %}
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta charset="utf-8">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+    {% hook 'html_head_end' %}
+</head>
+<body>
+
+
+<div class="container">
+
+<div class="row">
+    <div class="col-lg-4">
+
+        <div class="sidebar-menu">
+
+            <div class="main-menu">
+            {% widgets 'main-menu' %}
+            </div>
+
+            <h2>Portfolio:</h2>
+
+            {% widgets 'portfolio-menu' %}
+
+        </div>
+
+    </div>
+    <div class="col-lg-8">
+
+        <main>
+
+            {{ content|raw }}
+
+        </main>
+
+    </div>
+</div>
+
+</div>
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-lg-offset-2 red">
+
+            </div>
+            <div class="col-lg-8">
+                <div class="footer">
+                {% widgets 'footer-menu' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+		{% hook 'body_end' %}
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<h1 class="page-title">{{ article.title }}</h1>
+<div class="page-body">
+	{% if article.Images.count() > 0 %}
+		{% set img = article.Images.get()[0] %}
+			<a title="{{ article.title }}" class="gallery page-image" rel="gallery" href="{{ img.getThumb('original') }}">
+				<img alt="{{ article.title }}" title="{{ article.title }}" src="{{ img.getThumb('185x212') }}" />
+			</a>
+	{% endif %}
+	{{ article.body|raw }}
+	{% if article.Images.count() > 1 %}
+		{% set images = article.Images.get() %}
+		<div class="row">
+			{% for image in images %}
+				{% if not loop.first %}
+					<div class="col-md-3">
+						<a href="{{ image.getThumb('original') }}" class="thumbnail gallery" rel="gallery" title="{{ article.title }}">
+							<img src="{{ image.getThumb('[100x100]') }}" alt="{{ article.title }}" />
+						</a>
+					</div>
+				{% endif %}
+		  {% endfor %}
+		</div>
+	{% endif %}
+	<div class="social">Поділитись:
+		<span class='st_googleplus_large' displayText='Google +'></span>
+		<span class='st_facebook_large' displayText='Facebook'></span>
+		<span class='st_vkontakte_large' displayText='Vkontakte'></span>
+		<span class='st_twitter_large' displayText='Tweet'></span>
+		<span class='st_odnoklassniki_large' displayText='Odnoklassniki'></span>
+	</div>
+	<br />
+	<div class="clearfix"></div>
+	<a href="#" onclick="javascript:window.history.back(-1);return false;" class="link-general" title="{{ article.title }}">повернутись до списку статей</a>
+</div>
+<script>
+	$(document).ready(function(){
+		$('.gallery').fancybox({
+			titlePosition: 'inside'
+		});
+	});
+</script>
