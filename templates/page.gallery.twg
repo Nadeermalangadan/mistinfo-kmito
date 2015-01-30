@@ -1,5 +1,5 @@
 <div>
-{% if category.depth ==0 %}<h1>{% tr %}Gallery{% endtr %}</h1>{% endif %}
+{% if category.depth ==0 %}<h1>{% tr %}Каталоги {% endtr %}</h1>{% endif %}
 {% if categories|length > 0 %}
 	{% if category.depth >0 %}<h1>{{ category.title }}</h1>{% endif %}
 		{% for category in categories %}
@@ -21,7 +21,7 @@
 		{% for photo in photos %}
 		<div class="gallery-item">
 			<a rel="gallery" class="gallery" href="{{ photo.getThumb('original') }}">
-				<img src="{{ photo.getThumb('190x120') }}" alt="{{ photo.title }}" title="{{ photo.title }}" />
+				<img src="{{ photo.getThumb('205x205') }}" alt="{{ photo.title }}" title="{{ photo.title }}" />
 			</a>
 		</div>
 		{% endfor %}
