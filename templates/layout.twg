@@ -28,29 +28,11 @@
 <div class="container">
 
 
-<div class="row">
-    <div class="col-lg-4">
-
-        <div class="sidebar-menu">
-
-
-            <h2>Portfolio:</h2>
-
-            {% widgets 'portfolio-menu' %}
-
-        </div>
-
-    </div>
-    <div class="col-lg-8">
-
         <main>
 
             {{ content|raw }}
 
         </main>
-
-    </div>
-</div>
 
 </div>
 
