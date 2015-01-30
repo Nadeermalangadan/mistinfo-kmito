@@ -32,8 +32,13 @@ nav {
     margin: 0;
   }
 
+
+  .navbar-nav>li.active > a {
+    background: transparent;
+    text-decoration: underline;
+  }
   .navbar-nav>li>a {
-    padding: 5px 15px 5px 0;
+    padding: 5px 30px 5px 0;
     text-transform: uppercase;
     font-family: Tahoma, sans-serif;
     font-size: 16px;
@@ -41,10 +46,15 @@ nav {
     font-weight: bold;
     position: relative;
 
+    &:hover, &:active {
+      background: transparent;
+      text-decoration: underline;
+    }
+
     &:after {
       content: " ";
       position: absolute;
-      right: -1;
+      right: 15px;
       top: 5px;
       bottom: 5px;
       width: 1px;
