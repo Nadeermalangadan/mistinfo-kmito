@@ -27,15 +27,28 @@ nav {
   height: 35px;
 
   .navbar {
-    height: 35px;
-    min-height: 35px;
+    height: 33px;
+    min-height: 33px;
     margin: 0;
   }
 
   .navbar-nav>li>a {
-    padding: 5px 10px;
+    padding: 5px 15px 5px 0;
     text-transform: uppercase;
     font-family: Tahoma, sans-serif;
     font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    position: relative;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      right: -1;
+      top: 5px;
+      bottom: 5px;
+      width: 1px;
+      background: #000;
+    }
   }
 }
