@@ -11,9 +11,18 @@
 
 <header>
 
+<div class="container">
   <a href="" class="logo"></a>
+  </div>
 
 </header>
+<nav>
+<div class="container">
+            <div class="main-menu">
+            {% widgets 'main-menu' %}
+            </div>
+  </div>
+</nav>
 
 
 <div class="container">
@@ -24,9 +33,6 @@
 
         <div class="sidebar-menu">
 
-            <div class="main-menu">
-            {% widgets 'main-menu' %}
-            </div>
 
             <h2>Portfolio:</h2>
 
