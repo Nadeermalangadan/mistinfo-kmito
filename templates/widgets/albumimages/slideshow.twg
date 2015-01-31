@@ -4,7 +4,7 @@
             {% if photo.title %}
             <a href="{{ photo.title }}">
             {% endif %}
-            <img src="{{ photo.getThumb('980x350') }}" title="{{ photo.description }}" alt="{{ photo.description }}" />
+            <img src="{{ photo.getThumb('[940x320]') }}" title="{{ photo.description }}" alt="{{ photo.description }}" />
             </a>
         {% endfor %}
     </div>
