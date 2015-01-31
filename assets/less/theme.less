@@ -93,14 +93,25 @@ header {
     margin: 0 auto;
     text-indent: -100%;
     overflow: hidden;
+  }
 
-    &:before {
-      content: ' ';
-      background: #fff;
-      opacity: .5;
-      left: 0;
-      top: 50%;
-    }
+  &:before {
+    content: ' ';
+    display: block;
+    background: #fff;
+    opacity: .5;
+    left: 0;
+    top: 50%;
+    right: 50%;
+  }
+  &:after {
+    content: ' ';
+    display: block;
+    background: #fff;
+    opacity: .5;
+    left: 50%;
+    right: 100%;
+    top: 50%;
   }
 }
 
@@ -124,8 +135,6 @@ main {
     margin: 0;
 
     li {
-      text-indent: -100%;
-      overflow: hidden;
       width: 38px;
       height: 38px;
       position: relative;
