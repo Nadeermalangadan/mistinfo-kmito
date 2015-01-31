@@ -12,7 +12,6 @@
 
 <div class="bg-content">
   <div class="tile"></div>
-  <div class="top"></div>
 </div>
 
 
@@ -20,6 +19,7 @@
   <div class="line-left"></div>
   <div class="line-right"></div>
 
+  <div class="top-bg"></div>
   <div class="top">
 
     <div class="container">
