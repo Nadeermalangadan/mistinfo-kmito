@@ -75,6 +75,8 @@ VK.Widgets.Group("vk_groups", {mode: 2, width: "220", height: "400", color1: '22
 
 </div>
 
+      <div class="footer">Ресторан "Гетьман" &copy; 2015</div>
+
 
 		{% hook 'body_end' %}
 	</body>
