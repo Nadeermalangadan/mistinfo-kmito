@@ -14,10 +14,9 @@
   <div class="line-left"></div>
   <div class="line-right"></div>
 
+  <div class="top">
 
-  <div class="container">
-
-    <div class="top">
+    <div class="container">
 
       <div class="row">
 
@@ -33,49 +32,10 @@
 
   </div>
 
-</div>
-
-
-<header>
-
-<div class="container">
-  <a href="/" class="logo"></a>
-  </div>
-
-</header>
-<nav>
-<div class="container">
-
-  <div class="logo-small"></div>
-            <div class="main-menu">
-            {% widgets 'main-menu' %}
-            </div>
-  </div>
-</nav>
-
-
-<div class="container">
-
-
-        <main>
 
             {{ content|raw }}
 
-        </main>
-
 </div>
-
-
-<footer>
-    <nav class="container">
-
-                <div class="footer">
-                {% widgets 'footer-menu' %}
-                </div>
-    </nav>
-</footer>
-
-
 
 
 		{% hook 'body_end' %}
