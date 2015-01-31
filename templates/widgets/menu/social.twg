@@ -9,6 +9,7 @@
             {% else %}
               <a href="{{ menuitem.getUrl() }}" title="{{ menuitem.title() }}"></a>
             {% endif %}
+            <span class="ballon">{{ menuitem.title() }}</span>
         </li>
     {% endfor %}
 {% endmacro %}

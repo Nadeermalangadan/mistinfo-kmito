@@ -1,5 +1,5 @@
 <div class="content_block">
-    <h1 class="content_title">{% tr %}Отзывы{% endtr %}</h1>
+    <h1 class="content_title">{% tr %}Відгуки{% endtr %}</h1>
 <div class="node_content">
     {% if reviews|length == 0 %}
         <p>{% tr %}No reviews:{% endtr %}</p>
