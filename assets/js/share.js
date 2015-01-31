@@ -19,5 +19,5 @@
     slideshowEnd: function(){} //Triggers after all slides have been shown
   });
   $(".nivo-controlNav a").prepend("<i class='thumb-wrapper'></i>");
-  
+
 })(jQuery);
