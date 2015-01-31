@@ -41,7 +41,8 @@
   </div>
 
 
-  <header class="container">
+<div class="container">
+  <header>
     <a href="/" class="logo">Ресторан Гетьман</a>
 
 
@@ -49,7 +50,7 @@
       {% widgets 'menu-icons' %}
     </div>
   </header>
-
+</div>
   <main class="container">
 
     <nav>
