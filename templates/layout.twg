@@ -43,7 +43,7 @@
     <a href="/" class="logo">Ресторан Гетьман</a>
   </header>
 
-  <main>
+  <main class="container">
     {{ content|raw }}
   </main>
 
