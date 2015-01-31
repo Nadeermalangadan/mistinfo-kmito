@@ -8,7 +8,7 @@ body {
 }
 
 
-.content {
+.bg-content {
   background-image: url('../img/tile.png');
   position: fixed;
   top: 0;
@@ -17,34 +17,34 @@ body {
   bottom: 0;
   overflow: auto;
   z-index: 100;
-  padding: 0 64px;
-}
 
-.line-left {
-  background-image: url('../img/line-left.png');
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  overflow: auto;
-  width: 64px;
+  .line-left {
+    background-image: url('../img/line-left.png');
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+    width: 64px;
+  }
+  .line-right {
+    background-image: url('../img/line-right.png');
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    width: 60px;
+  }
+  .top {
+    background: rgba(42,34,24,.7);
+    border-bottom: 1px solid #604f35;
+    height: 40px;
+  }
 }
-.line-right {
-  background-image: url('../img/line-right.png');
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  overflow: auto;
-  width: 60px;
-}
-
 
 .top {
-  background: rgba(42,34,24,.7);
-  border-bottom: 1px solid #604f35;
   height: 40px;
-  margin: 0px -64px;
   line-height: 40px;
   color: #fff;
   font-weight: bold;

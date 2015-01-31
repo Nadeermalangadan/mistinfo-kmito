@@ -10,9 +10,15 @@
 <body>
 
 
-<div class="content">
+<div class="bg-content">
   <div class="line-left"></div>
   <div class="line-right"></div>
+
+  <div class="top"></div>
+</div>
+
+
+<div class="content">
 
   <div class="top">
 
@@ -32,8 +38,7 @@
 
   </div>
 
-
-            {{ content|raw }}
+    {{ content|raw }}
 
 </div>
 
