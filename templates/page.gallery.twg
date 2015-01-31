@@ -7,7 +7,7 @@
 				{% if category.cover %}
 					<div class="gallery-items clearfix">
 						<a href="{% url 'ComGallery.ShowGallery', { 'category' : category.Elements } %}">
-							<img src="{{ category.cover.getThumb('[205x205]') }}" alt="{{ category.title }}" title="{{ category.title }}" />
+							<img src="{{ category.cover.getThumb('[205x205]') }}"  />
 						</a>
 				{% endif %}
 						<h3><a class="category-title" href="{% url 'ComGallery.ShowGallery', { 'category' : category.Elements } %}">{{ category.title }}</a></h3>
@@ -21,7 +21,7 @@
 		{% for photo in photos %}
 		<div class="gallery-item">
 			<a rel="gallery" class="gallery" href="{{ photo.getThumb('original') }}">
-				<img src="{{ photo.getThumb('205x205') }}" alt="{{ photo.title }}" title="{{ photo.title }}" />
+				<img src="{{ photo.getThumb('[205x205]') }}"  />
 			</a>
 		</div>
 		{% endfor %}
