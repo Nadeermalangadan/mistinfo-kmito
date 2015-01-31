@@ -7,7 +7,7 @@
 				{% if category.cover %}
 					<div class="gallery-items clearfix">
 						<a href="{% url 'ComGallery.ShowGallery', { 'category' : category.Elements } %}">
-							<img src="{{ category.cover.getThumb('[100x100]') }}" alt="{{ category.title }}" title="{{ category.title }}" />
+							<img src="{{ category.cover.getThumb('[205x205]') }}" alt="{{ category.title }}" title="{{ category.title }}" />
 						</a>
 				{% endif %}
 						<h3><a class="category-title" href="{% url 'ComGallery.ShowGallery', { 'category' : category.Elements } %}">{{ category.title }}</a></h3>
