@@ -40,10 +40,13 @@
 
 
   <header class="container">
-    <a href="/" class="Logo">Ресторан Гетьман</a>
+    <a href="/" class="logo">Ресторан Гетьман</a>
   </header>
 
+  <main>
     {{ content|raw }}
+  </main>
+
 
 </div>
 
