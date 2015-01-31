@@ -17,7 +17,19 @@
 
   <div class="container">
 
-    <div class="top"></div>
+    <div class="top">
+
+      <div class="row">
+
+        <div class="col-xs-6">
+        {% widgets 'top-left' %}
+        </div>
+        <div class="col-xs-6">
+        {% widgets 'top-right' %}
+        </div>
+      </div>
+
+    </div>
 
   </div>
 
