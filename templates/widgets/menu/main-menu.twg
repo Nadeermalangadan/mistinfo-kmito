@@ -20,7 +20,7 @@
 {% endmacro %}
 
 <nav class="navbar navbar-main" role="navigation">
-	<ul class="nav navbar-nav">
+	<ul class="nav nav-tabs nav-justified">
 		{{ _self.menuElement(menu) }}
 	</ul>
 </nav>
