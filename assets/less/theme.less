@@ -141,11 +141,24 @@ main > nav {
     font-size: 18px;
     font-style: normal;
     color: #5b4427;
+    position: relative;
+
+    &:after {
+      content: ' ';
+      position: absolute;
+      right: 0;
+      top: 5px;
+      bottom: 5px;
+      width: 1px;
+      background-color: #5b4427;
+    }
   }
   .nav-tabs.nav-justified>li.active>a,
   .nav-tabs.nav-justified>li>a:hover,
   .nav-tabs.nav-justified>li>a:focus,
   .nav-tabs.nav-justified>li>a:active {
+    background: transparent;
+    border: 0 none;
     color: #fff;
   }
 
