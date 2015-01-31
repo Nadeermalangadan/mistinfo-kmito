@@ -147,13 +147,17 @@ main > nav {
       content: ' ';
       position: absolute;
       right: 0;
-      top: 5px;
-      bottom: 5px;
+      top: 14px;
+      bottom: 14px;
       width: 1px;
       background-color: #5b4427;
     }
+    &:last-child:after {
+      display: none;
+    }
   }
   .nav-tabs.nav-justified>li.active>a,
+  .nav-tabs.nav-justified>li.active>a:hover,
   .nav-tabs.nav-justified>li>a:hover,
   .nav-tabs.nav-justified>li>a:focus,
   .nav-tabs.nav-justified>li>a:active {
