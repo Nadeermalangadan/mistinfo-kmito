@@ -41,6 +41,11 @@
 
   <header class="container">
     <a href="/" class="logo">Ресторан Гетьман</a>
+
+
+    <div class="menu-icons">
+      {% widgets 'menu-icons' %}
+    </div>
   </header>
 
   <main class="container">
