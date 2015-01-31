@@ -1,0 +1,12 @@
+<div id="slide_holder">
+    <div id="slider">
+        {% for photo in photos %}
+            {% if photo.title %}
+            <a href="{{ photo.title }}">
+            {% endif %}
+            <img src="{{ photo.getThumb('980x350') }}" title="{{ photo.description }}" alt="{{ photo.description }}" />
+            </a>
+        {% endfor %}
+    </div>
+    <div id="htmlcaption" class="nivo-caption"></div>
+</div>
