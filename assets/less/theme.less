@@ -6,6 +6,19 @@ body {
 }
 
 
+
+@font-face {
+  font-family: 'intro_regular';
+  src: url('../fonts/intro-webfont.eot');
+  src: url('../fonts/intro-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/intro-webfont.woff2') format('woff2'),
+  url('../fonts/intro-webfont.woff') format('woff'),
+  url('../fonts/intro-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 .bg-content {
   background-image: url('../img/bg.jpg');
   background-repeat: no-repeat;
@@ -123,6 +136,9 @@ main > nav {
   }
   .nav-tabs.nav-justified>li>a {
     border: 0 none;
+    font-family: 'intro_regular', serif;
+    text-transform: uppercase;
+    font-size: 18px;
   }
 
   &:before {
