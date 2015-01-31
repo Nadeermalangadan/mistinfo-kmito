@@ -4,7 +4,11 @@
     {% for menuitem in menu.getItems() %}
         {% set description = menuitem.description() %}
         <li class="{{ menuitem.getCss() }}">
-            <a href="{{ menuitem.getUrl() }}" title="{{ menuitem.title() }}"></a>
+            {% if menuitem.getUrl() == '' %}
+              <span title="{{ menuitem.title() }}"></span>
+            {% else %}
+              <a href="{{ menuitem.getUrl() }}" title="{{ menuitem.title() }}"></a>
+            {% endif %}
         </li>
     {% endfor %}
 {% endmacro %}

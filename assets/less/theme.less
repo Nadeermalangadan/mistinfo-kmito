@@ -106,7 +106,8 @@ main {
 .menu-icons {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 50%;
+  margin-top: -19px;
   ul {
     list-style: none;
     margin: 0;
@@ -118,6 +119,17 @@ main {
       height: 38px;
       display: inline-block;
       background-image: url('../img/icons.png');
+
+      &.discounts {
+        background-position: -45px 0;
+      }
+      &.live-music {
+        background-position: -91px 0;
+      }
+      &.wifi {
+        width: 56px;
+        background-position: -137px 0;
+      }
     }
   }
 }
