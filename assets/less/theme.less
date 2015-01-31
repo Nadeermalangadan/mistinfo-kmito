@@ -206,10 +206,19 @@ main > nav {
   margin-top: 15px;
 }
 
-.gallery-item {
+.gallery-item, .gallery-items {
   display: inline-block;
   vertical-align: top;
   padding: 10px 6px 10px 5px;
+
+  a {
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
 }
 
 
@@ -222,6 +231,15 @@ main > nav {
   border: 2px solid #22140e;
   padding: 5px 9px;
 }
-#comfeedback_form_frontend_captcha {
+#comfeedback_form_frontend_captcha, #reviews_captcha {
   margin: 10px 0;
+}
+
+.reviews_block {
+  margin-bottom: 15px;
+  border-left: 2px solid #22140e;
+}
+.comment_name {
+  font-weight: bold;
+  margin-right: 10px;
 }
