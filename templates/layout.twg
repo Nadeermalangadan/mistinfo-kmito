@@ -38,6 +38,11 @@
 
   </div>
 
+
+  <header class="container">
+    <a href="/" class="Logo">Ресторан Гетьман</a>
+  </header>
+
     {{ content|raw }}
 
 </div>
