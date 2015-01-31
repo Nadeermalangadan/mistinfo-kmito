@@ -49,6 +49,11 @@
   </header>
 
   <main class="container">
+
+    <nav>
+    {% widgets 'main-menu' %}
+    </nav>
+
     {{ content|raw }}
   </main>
 
