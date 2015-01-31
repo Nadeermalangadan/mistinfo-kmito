@@ -27,5 +27,8 @@
 		{% endfor %}
 		<div class="clearfix"></div>
 {% endif %}
+
+<div class="clearfix">
 {% include 'block.pagination.twg' %}
+</div>
 </div>
