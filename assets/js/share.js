@@ -20,4 +20,5 @@
   });
   $(".nivo-controlNav a").prepend("<i class='thumb-wrapper'></i>");
 
+  $('.gallery').fancybox();
 })(jQuery);
