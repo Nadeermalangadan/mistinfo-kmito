@@ -1,6 +1,6 @@
 {% for photo in photos %}
 
     <a rel="gallery" class="gallery" href="{{ photo.getThumb('original') }}">
-		<img src="{{ photo.getThumb('[205x205]') }}" />
+		<img src="{{ photo.getThumb('[240x240]') }}" />
 		</a>
 {% endfor %}
