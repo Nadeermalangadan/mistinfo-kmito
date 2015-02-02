@@ -18,8 +18,8 @@
 
 
 <div class="content">
-  <div class="line-left"></div>
-  <div class="line-right"></div>
+  <div class="line-left hidden-sm hidden-xs hidden-md"></div>
+  <div class="line-right hidden-sm hidden-xs hidden-md"></div>
 
   <div class="top-bg"></div>
   <div class="top">
@@ -78,7 +78,7 @@ VK.Widgets.Group("vk_groups", {mode: 2, width: "220", height: "400", color1: '22
 
 </div>
 
-      <div class="footer">Ресторан "Гетьман" &copy; 2015</div>
+      <div class="footer">Ресторан "Гетьман" &copy; Вінниця 2015</div>
 
 
 		{% hook 'body_end' %}
