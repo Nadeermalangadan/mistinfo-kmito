@@ -145,15 +145,28 @@ main {
       display: inline-block;
       background-image: url('../img/icons.png');
 
+      &:hover {
+        background-position: 0 -38px;
+      }
+
       &.discounts {
         background-position: -45px 0;
+        &:hover {
+          background-position: -45px -38px;
+        }
       }
       &.live-music {
         background-position: -91px 0;
+        &:hover {
+          background-position: -91px -38px;
+        }
       }
       &.wifi {
         width: 56px;
         background-position: -137px 0;
+        &:hover {
+          background-position: -137px -38px;
+        }
       }
       .ballon {
         display: none;
@@ -186,11 +199,10 @@ main > nav {
   background-image: url('../img/menu.gif');
   background-position: 0 -66px;
   background-repeat: repeat-x;
-  height: 66px;
   margin: 0 -15px 0;
   border-radius: 0 !important;
-  padding: 8px 10px;
-  background-color: #5b4427;
+  padding: 10px 10px 6px;
+  background-color: #22140e;
 
   .navbar.navbar-main {
     margin: 0;
