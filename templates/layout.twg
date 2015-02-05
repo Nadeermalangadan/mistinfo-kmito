@@ -81,6 +81,7 @@ VK.Widgets.Group("vk_groups", {mode: 2, width: "220", height: "400", color1: '22
       <div class="footer">Ресторан "Гетьман" &copy; Вінниця 2015</div>
 
 
+	<a href="#0" class="cd-top"></a>
 		{% hook 'body_end' %}
 	</body>
 </html>
