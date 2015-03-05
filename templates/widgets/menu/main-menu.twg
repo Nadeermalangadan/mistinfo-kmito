@@ -19,8 +19,6 @@
     {% endfor %}
 {% endmacro %}
 
-<nav class="navbar navbar-main" role="navigation">
-	<ul class="nav navbar-nav">
-		{{ _self.menuElement(menu) }}
-	</ul>
-</nav>
+<ul class="nav navbar-nav">
+	{{ _self.menuElement(menu) }}
+</ul>
