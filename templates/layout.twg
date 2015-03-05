@@ -30,9 +30,6 @@
         </div>
 
         <div class="b-cart">
-            <a href="">Реєстрація</a>
-            <a href="">Увійти</a>
-
             <a class="link-cart" href="">
                 <span>Ваша торбинка порожня</span>
             </a>
@@ -42,16 +39,6 @@
     <nav class="navbar navbar-default" role="navigation">
         <div class="collapse navbar-collapse">
 			{% widgets 'main-menu' %}
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#!/catalog">Що нового?</a></li>
-                <li><a href="#!/testpage">Дизайнери</a></li>
-                <li><a href="#!/testpage">Одяг</a></li>
-                <li><a href="#!/testpage">Сумки</a></li>
-                <li><a href="#!/testpage">Взуття</a></li>
-                <li><a href="#!/testpage">Аксесуари</a></li>
-                <li><a href="#!/testpage">Подарунки</a></li>
-                <li class="discount"><a href="#!/testpage">Розпродаж</a></li>
-            </ul>
         </div>
     </nav>
 
