@@ -1,1 +1,167 @@
-<div class="product_content">{% widgets 'center' %}</div>
+<div class="page-home">
+
+<div class="row">
+
+    <div class="col col-md-3">
+
+        <h3><a href="">Сучасні<br/> тенденції моди</a></h3>
+
+        <p>Огляд новинок моди...</p>
+
+        <div class="thick-border">
+            <img src="/assets/img/articles/1.png" />
+
+            <h4 class="title"><a href="">Довгі<br/>спідниці</a></h4>
+
+            <p>Кому вони личать?</p>
+        </div>
+    </div>
+
+    <div class="col col-md-5">
+
+        <div class="large-image discount blur">
+            <img src="/assets/img/articles/2.png" />
+
+            <div class="description">
+                <p>Нова колекція</p>
+
+                <h4 class="title"><a href="">Огляд колекції DOLCE & GABBANA</a></h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="col col-md-4">
+
+        <div class="large-image blur">
+            <img src="/assets/img/articles/3.png" />
+
+            <div class="description">
+                <p>Про моду</p>
+
+                <h4 class="title"><a href="">Як підібрати жакет?</a></h4>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+    <div class="row">
+
+        <div class="col col-md-5">
+
+            <h3><a href="">Знову<br/> в моді</a></h3>
+
+            <p>Огляд новинок моди...</p>
+
+
+            <div class="large-image discount blur">
+                <img src="/assets/img/articles/6.png" />
+
+                <div class="description">
+                    <p>Нова колекція</p>
+
+                    <h4 class="title"><a href="">Ця сорочка якраз на тебе</a></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="col col-md-4">
+
+            <div class="large-image white blur">
+                <img src="/assets/img/articles/4.png" />
+
+                <div class="description">
+                    <p>Про моду</p>
+
+                    <h4 class="title"><a href="">Як підібрати жакет?</a></h4>
+                </div>
+            </div>
+
+            <div class="thick-border">
+                <img src="/assets/img/articles/5.png" />
+
+                <h4 class="title"><a href="">Зимова<br/>колекція</a></h4>
+
+                <p>Кому вони личать?</p>
+            </div>
+        </div>
+
+        <div class="col col-md-3">
+            <div class="large-image discount blur">
+                <img src="/assets/img/articles/7.png" />
+
+                <div class="description">
+                    <h4 class="title"><a href="">Багажні сумочки</a></h4>
+                </div>
+            </div>
+            <div class="quote">
+                <div>
+                    Для того чтобы быть незаменимой нужно всегда быть разной
+
+                    <span>модельер и основательница модного дома  "Chanel" <strong>Коко Шанель</strong></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<div class="b-top-products">
+
+    <h2>Нові надходження</h2>
+
+    <div class="row">
+
+        <div class="col-xs-4">
+
+            <a class="b-product" href="">
+                <div class="b-product-image">
+                    <img src="/assets/img/products/1.png" />
+                </div>
+
+                <span class="h4">Бомбо-сумка</span>
+
+                <span>Coton</span>
+                <span>123$</span>
+            </a>
+
+        </div>
+        <div class="col-xs-4">
+
+            <a class="b-product" href="">
+                <div class="b-product-image">
+                    <img src="/assets/img/products/2.png" />
+                </div>
+
+                <span class="h4">Бомбо-сумка</span>
+
+                <span>Coton</span>
+                <span>123$</span>
+            </a>
+
+        </div>
+        <div class="col-xs-4">
+
+            <a class="b-product" href="">
+                <div class="b-product-image">
+                    <img src="/assets/img/products/3.png" />
+                </div>
+
+                <span class="h4">Бомбо-сумка</span>
+
+                <span>Coton</span>
+                <span>123$</span>
+            </a>
+
+        </div>
+
+    </div>
+
+
+</div>

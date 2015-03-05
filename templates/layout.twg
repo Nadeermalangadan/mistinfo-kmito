@@ -9,44 +9,165 @@
 </head>
 <body>
 
-<header>
 
 <div class="container">
-  <a href="/" class="logo"></a>
-  </div>
 
-</header>
-<nav>
-<div class="container">
+    <header>
 
-  <div class="logo-small"></div>
-            <div class="main-menu">
-            {% widgets 'main-menu' %}
+        <div class="logo-container">
+            <a href="" class="logo">SEASON-DE-LUXE</a>
+            <span>Be stylish... Always</span>
+        </div>
+
+        <div class="b-langs">
+            <a class="active" href="">Українська</a> |
+            <a href="">Русский</a> |
+            <a href="">English</a>
+
+            <div class="b-phone">
+            +380 (123) 456-78-90
             </div>
-  </div>
-</nav>
+        </div>
 
+        <div class="b-cart">
+            <a href="">Реєстрація</a>
+            <a href="">Увійти</a>
 
-<div class="container">
+            <a class="link-cart" href="">
+                <span>Ваша торбинка порожня</span>
+            </a>
+        </div>
+    </header>
 
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="collapse navbar-collapse">
+			{% widgets 'main-menu' %}
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#!/catalog">Що нового?</a></li>
+                <li><a href="#!/testpage">Дизайнери</a></li>
+                <li><a href="#!/testpage">Одяг</a></li>
+                <li><a href="#!/testpage">Сумки</a></li>
+                <li><a href="#!/testpage">Взуття</a></li>
+                <li><a href="#!/testpage">Аксесуари</a></li>
+                <li><a href="#!/testpage">Подарунки</a></li>
+                <li class="discount"><a href="#!/testpage">Розпродаж</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <main>
-
-            {{ content|raw }}
-
-        </main>
-
+    <div>{{ content|raw }}</div>
 </div>
 
 
 <footer>
-    <nav class="container">
 
-                <div class="footer">
-                {% widgets 'footer-menu' %}
+    <div class="container">
+    <div class="row">
+
+        <div class="col-xs-5">
+
+            <div class="h1">Задати<br />питання</div>
+            <p>Питайте все, крім інтиму</p>
+
+
+            <form>
+
+                <div class="form-group">
+
+                    <input type="text" class="form-control" placeholder="Ім'я" />
+
                 </div>
-    </nav>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Email" />
+                </div>
+
+                <div class="form-group">
+                    <textarea class="form-control" rows="10" placeholder="Повідомлення"></textarea>
+                </div>
+
+            </form>
+
+
+        </div>
+        <div class="col-xs-3">
+
+            <div class="h4">Наші контакти</div>
+
+            <p>Україна</p>
+            <p>м. Вінниця, вул. Павла Зіброва 1</p>
+            <p>тел: +380 (123) 456-78-90</p>
+            <p>email: admin@mail.ru</p>
+            <p>&nbsp;</p>
+
+            <div class="h4">Підписуйтесь</div>
+
+            <div class="b-social">
+
+                <a href=""><span class="fa fa-facebook"></span> Facebook</a>
+                <a href=""><span class="fa fa-vk"></span> VK</a>
+
+            </div>
+
+        </div>
+        <div class="col-xs-4">
+            <div class="h4">Наше розташування</div>
+
+            <p>Забирайте товари тут</p>
+            <div id="map"></div>
+
+        </div>
+
+    </div>
+
+        <div class="copyright">
+
+            <p>Copyright &copy; 2014 SEASON-DE-LUXE. All Rights Reserved.
+
+            <p>Зроблено <a href="">нами</a></p>
+
+        </div>
+    </div>
+
 </footer>
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+
+<script type="text/javascript">
+    // When the window has finished loading create our google map below
+    google.maps.event.addDomListener(window, 'load', init);
+
+    function init() {
+        // Basic options for a simple Google Map
+        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+        var mapOptions = {
+            // How zoomed in you want the map to start at (always required)
+            zoom: 11,
+
+            // The latitude and longitude to center the map (always required)
+            center: new google.maps.LatLng(40.6700, -73.9400), // New York
+
+            // How you would like to style the map.
+            // This is where you would paste any style found on Snazzy Maps.
+            styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
+        };
+
+        // Get the HTML DOM element that will contain your map
+        // We are using a div with id="map" seen below in the <body>
+        var mapElement = document.getElementById('map');
+
+        // Create the Google Map using our element and options defined above
+        var map = new google.maps.Map(mapElement, mapOptions);
+
+        // Let's also add a marker while we're at it
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(40.6700, -73.9400),
+            map: map,
+            title: 'Snazzy!'
+        });
+    }
+</script>
 
 
 
