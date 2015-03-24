@@ -4,8 +4,10 @@
     {% hook 'html_head_begin' %}
     <meta http-equiv="X-UA-Compatible" content="IE=9" />
     <meta charset="utf-8">
+    <base src="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
-    {% hook 'html_head_end' %}
+    
 </head>
 <body class="preload">
 
