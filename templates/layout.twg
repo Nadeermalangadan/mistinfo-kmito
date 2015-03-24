@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
     
+    {% hook 'html_head_end' %}
 </head>
 <body class="preload">
 
@@ -117,76 +118,7 @@
             <!-- Collapse -->
             <div id="nav-collapse3" class="collapse navbar-main navbar-collapse navbar-absolute">
             
-              <!-- Navbar Center -->
-              <ul class="nav navbar-nav navbar-left case-u">
-                <li class="active"><a href="index.html">home</a></li>
-                <li class="dropdown dropdown-mega"><a href="#" class="dropdown-toggle" data-toggle="dropdown">pages<i class="fa fa-angle-down toggler"></i></a>
-                  
-                  <!-- Mega Menu -->
-                  <div class="mega-menu dropdown-menu">
-                    <!-- Row -->
-                    <div class="row">
-                    
-                      <!-- col -->
-                      <div class="col-md-3">
-                        <img class="featured-img hidden-xs hidden-sm" src="assets/images/menu-pic.jpg" alt="">
-                      </div>
-                      <!-- /col -->
-                      
-                      <!-- col -->
-                      <div class="col-md-3">
-                        <h5>shop pages</h5>
-                        <ul class="links">
-                          <li><a href="category.html">category</a></li>
-                          <li><a href="category2.html">category #2</a></li>
-                          <li><a href="product.html">product details</a></li>
-                          <li><a href="cart.html">cart</a></li>
-                          <li><a href="checkout.html">checkout</a></li>
-                        </ul>
-                      </div>
-                      <!-- /col -->
-                      
-                      <!-- col -->
-                      <div class="col-md-3">
-                        <h5>common pages</h5>
-                        <ul class="links">
-                          <li><a href="page.html">Typical Page</a></li>
-                          <li><a href="error-404.html">404</a></li>
-                          <li><a href="error-generic.html">generic error</a></li>
-                          <li><a href="contact.html">contact</a></li>
-                          <li><a href="faq.html">faq</a></li>
-                        </ul>
-                      </div>
-                      <!-- /col -->
-                      
-                      <!-- col -->
-                      <div class="col-md-3">
-                        <h5>other pages</h5>
-                        <ul class="links">
-                          <li><a href="blog.html">blog</a></li>
-                          <li><a href="blog-post.html">single post</a></li>
-                          <li><a href="login.html">login</a></li>
-                          <li><a href="register.html">register</a></li>
-                        </ul>
-                      </div>
-                      <!-- /col -->
-                    </div>
-                    <!-- /Row -->
-                  </div>
-                  <!-- /Mega Menu -->
-                </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">features<i class="fa fa-angle-down toggler"></i></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="uikit/index.html">Elements + Modules</a></li>
-                    <li><a href="uikit/index.html#bxslider.demo?viewer=ajax">Sliders</a></li>
-                    <li><a href="uikit/index.html#animations.demo?viewer=ajax">Animations</a></li>
-                  </ul>
-                </li>
-                <li><a href="headers.html">headers</a></li>
-                <li><a href="footers.html">footers</a></li>
-              </ul>
-              <!-- /Navbar Center -->
+			  {% widgets 'main-menu' %}
               
             </div>
             <!-- /Collapse -->
@@ -199,7 +131,7 @@
               
                   <form class="header-search">
                     <div class="form-group">
-                      <input class="form-control" placeholder="SEARCH" type="text">
+                      <input class="form-control" placeholder="ПОИСК" type="text">
                       <button class="btn btn-empty"><i class="fa fa-search"></i></button>
                     </div>
                   </form>
@@ -221,36 +153,7 @@
       <!-- /Header Block
       ============================================== -->
 	
-	
-    <header>
 
-        <div class="logo-container">
-            <a href="" class="logo">SEASON-DE-LUXE</a>
-            <span>Be stylish... Always</span>
-        </div>
-
-        <div class="b-langs">
-            <a class="active" href="">Українська</a> |
-            <a href="">Русский</a> |
-            <a href="">English</a>
-
-            <div class="b-phone">
-            +380 (123) 456-78-90
-            </div>
-        </div>
-
-        <div class="b-cart">
-            <a class="link-cart" href="">
-                <span>Ваша торбинка порожня</span>
-            </a>
-        </div>
-    </header>
-
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="collapse navbar-collapse">
-			{% widgets 'main-menu' %}
-        </div>
-    </nav>
 
     <div>{{ content|raw }}</div>
 </div>
