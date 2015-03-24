@@ -8252,10 +8252,10 @@ footer .copyright a {
     vertical-align: top;
 }
 .b-catalog-products.b-products-page .b-product .b-product-image {
-    height: 160px;
+    height: 210px;
     position: relative;
 }
-.b-catalog-products.b-products-page .b-product {
+.b-catalog-products.b-products-page .b-product img {
     position: absolute;
     -vendor-animation-duration: 500s;
     -vendor-animation-delay: 0s;
