@@ -61,12 +61,12 @@ $(function() {
 		}, function() {
 			var el1 = $(this).find('img.first-img')
 			    .removeClass('zoomOutLeft fadeOut')
-			    .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+			    .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd onanimationend animationend', function() {
                     el.removeClass('animated');
                 });
 			$(this).find('img.second-img')
 			    .removeClass('zoomInRight fadeIn')
-			    .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+			    .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd onanimationend animationend', function() {
                     el.removeClass('animated');
                 });
         });
