@@ -1,6 +1,6 @@
 <h1 class="page_title">{{ category.title }}</h1>
 
-<div class="products_main">
+<div class="b-catalog-products">
 {% set categories = category.PublicElements.get(1) %}
 {% if categories|length > 0 %}
 		{% for cat in categories %}
@@ -13,22 +13,17 @@
 {% else %}
 		{% if products|length > 0 %}
 			{% for product in products %}
-			    <div style="width: 33%">
+                <a class="b-product" title="{{ product.title }}" href="{{ product.getUrl() }}">
+                    {% set images = product.Images.get() %}
+                    <div class="b-product-image">
+                        <img src="{{ images.0.getThumb('[215x160]') }}" />
+                    </div>
 
-                    <a class="b-product" title="{{ product.title }}" href="{{ product.getUrl() }}">
-				        {% set images = product.Images.get() %}
-                        <div class="b-product-image">
-                            <img src="{{ images.0.getThumb('[215x160]') }}/assets/img/products/1.png" />
-                        </div>
+                    <span class="h4">{{ product.title }}</span>
 
-                        <span class="h4">{{ product.title }}</span>
-
-					    {% if product.is_latest %}<span>Новинка</span>{% endif %}
-                        <span>{{ product.getMainPrice('%.2f') }}</span>
-                    </a>
-
-			    </div>
-
+                    {% if product.is_latest %}<span>Новинка</span>{% endif %}
+                    <span>{{ product.getMainPrice('%.2f') }}</span>
+                </a>
 
 			{% endfor %}
 			<div class="clearfix"></div>
