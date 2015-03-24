@@ -1,0 +1,63 @@
+<h1 class="page_title">{{ category.title }}</h1>
+
+<div class="products_main">
+{% set categories = category.PublicElements.get(1) %}
+{% if categories|length > 0 %}
+		{% for cat in categories %}
+			<div class="category_box"{% if cat.image %} style="background-image: url('{{ cat.getThumb('[225x225]') }}')"{% endif %}>
+				<div class="product_info">
+					<h3><a href="{{ cat.getUrl() }}">{{ cat.title }}</a></h3>
+				</div>
+			</div>
+		{% endfor %}
+{% else %}
+		{% if products|length > 0 %}
+			{% for product in products %}
+			    <div style="width: 33%">
+
+                    <a class="b-product" title="{{ product.title }}" href="{{ product.getUrl() }}">
+				        {% set images = product.Images.get() %}
+                        <div class="b-product-image">
+                            <img src="{{ images.0.getThumb('[215x160]') }}/assets/img/products/1.png" />
+                        </div>
+
+                        <span class="h4">{{ product.title }}</span>
+
+					    {% if product.is_latest %}<span>Новинка</span>{% endif %}
+                        <span>{{ product.getMainPrice('%.2f') }}</span>
+                    </a>
+
+			    </div>
+
+
+			{% endfor %}
+			<div class="clearfix"></div>
+			{% include 'block.pagination' %}
+		{% endif %}
+{% endif %}
+</div>
+<div class="clearfix"></div>
+<div id="inline" style="display: none">
+    <div class="order_title">{% tr %}Order{% endtr %}</div>
+
+    {% widgets 'order' %}
+
+</div>
+<script>
+$(function() {
+
+    $('.product_button_order_buy').click(function() {
+        ComEcommerce_Webservice_Cart.addProductOrder($(this).data('productId'), $('#quantity_wanted').val() || 1, function(res) {
+            $('#order_page').replaceWith(res);
+        });
+    });
+
+});
+</script>
+<script>
+	$(document).ready(function(){
+		$('.gallery').fancybox({
+			titlePosition: 'none'
+		});
+	});
+</script>
