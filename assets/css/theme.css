@@ -8257,15 +8257,21 @@ footer .copyright a {
 }
 .b-catalog-products.b-products-page .b-product img {
     position: absolute;
-    -vendor-animation-duration: 500s;
-    -vendor-animation-delay: 0s;
+    left: 50%;
+    margin-left: -107px;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+.b-catalog-products.b-products-page .b-product .first-img {
+    opacity: 1;
 }
 .b-catalog-products.b-products-page .b-product:hover .first-img {
-    display: none;
+    opacity: 0;
 }
 .b-catalog-products.b-products-page .b-product .second-img {
-    display: none;
+    opacity: 0;
 }
 .b-catalog-products.b-products-page .b-product:hover .second-img {
-    display: block;
+    opacity: 1;
 }
