@@ -8251,6 +8251,15 @@ footer .copyright a {
     display: inline-block;
     vertical-align: top;
 }
+.b-catalog-products.b-products-page .b-product .b-product-image {
+    height: 160px;
+    position: relative;
+}
+.b-catalog-products.b-products-page .b-product {
+    position: absolute;
+    -vendor-animation-duration: 500s;
+    -vendor-animation-delay: 0s;
+}
 .b-catalog-products.b-products-page .b-product:hover .first-img {
     display: none;
 }
