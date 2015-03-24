@@ -14,7 +14,7 @@
     <!-- Preloader 
     ============================================ -->
     <div class="page-preloader">
-      <div class="vcenter"> <div class="vcenter-this"><img class="anim" src="images/loader.gif" alt="loading..." /></div></div>
+      <div class="vcenter"> <div class="vcenter-this"><img class="anim" src="assets/images/loader.gif" alt="loading..." /></div></div>
     </div>
     <!-- /Preloader 
 
@@ -39,7 +39,7 @@
                 <!-- v-centered -->               
                 <div class="vcenter-this">
                   <a href="/">
-                    <img src="images/logo.png" alt="SEASON-DE-LUXE" />
+                    <img src="assets/images/logo.png" alt="SEASON-DE-LUXE" />
 					<span>Be stylish... Always</span>
                   </a>
                 </div>
@@ -60,74 +60,6 @@
                 <div class="vcenter-this">
 
                   <!-- Cart Summary -->
-                  <div class="header-cart-summary pull-right clearfix">
-                  
-                    <i class="icon ti ti-bag"></i>
-                    
-                    <!-- Summary Text -->
-                    <div class="summary-text">
-                    
-                      <small>(4) items in your cart</small>
-                      
-                      <a class="total" data-toggle="dropdown" href="#"><span class="hidden-xs hidden-sm total-text">TOTAL</span><span class="total-price">$560.00</span><i class="toggler ti ti-plus rot-135"></i></a>
-                      
-                      <!-- Dropdown Panel -->
-                      <div class="dropdown-menu dropdown-panel dropdown-right arrow-top" data-keep-open="true">
-                        <section>
-                          <!-- Mini Cart -->
-                          <ul class="mini-cart">
-                            <!-- Item -->
-                            <li class="clearfix">
-                              <img src="images/products/product1.jpg" alt="">
-                              <div class="text">
-                                <a class="title" href="#">Modern black hat</a>
-                                <div class="details">2 x $40.50
-                                  <div class="btn-group">
-                                    <a class="btn btn-primary" href="#"><i class="fa fa-pencil"></i></a>
-                                    <a class="btn btn-default" href="#"><i class="fa fa-trash"></i></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <!-- /Item -->
-                            
-                            <!-- Item -->
-                            <li class="clearfix">
-                              <img src="images/products/product2.jpg" alt="">
-                              <div class="text">
-                                <a class="title" href="#">Sexy lace blouse</a>
-                                <div class="details">1 x $95.00
-                                  <div class="btn-group">
-                                    <a class="btn btn-primary" href="#"><i class="fa fa-pencil"></i></a>
-                                    <a class="btn btn-default" href="#"><i class="fa fa-trash"></i></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                            <!-- /Item -->
-                          </ul>
-                          <!-- /Mini Cart -->
-                        </section>
-                        
-                        <section>
-                          <div class="row grid-10">
-                            <div class="col-md-6">
-                              <a class="btn btn-base btn-block margin-y-5" href="cart.html">view cart</a>
-                            </div>
-                            <div class="col-md-6">
-                              <a class="btn btn-primary btn-block margin-y-5" href="checkout.html">checkout</a>
-                            </div>
-                          </div>
-                        </section>
-                      </div>
-                      <!-- /Dropdown Panel -->
-                      
-                    </div>
-                    <!-- /Summary Text -->
-                    
-                  </div>
-                  <!-- /Cart summary -->
-
                 </div>
                 <!-- v-centered -->
                 
@@ -178,7 +110,7 @@
                 <span class="sr-only">Toggle navigation</span>
                 <i class="fa fa-navicon"></i>
               </button>
-              <a class="navbar-brand visible-xs" href="#"><img src="images/logo-xs.png" alt="H"></a>
+              <a class="navbar-brand visible-xs" href="#"><img src="assets/images/logo.png" alt="H"></a>
             </div>
             <!-- /Header-->
           
@@ -197,7 +129,7 @@
                     
                       <!-- col -->
                       <div class="col-md-3">
-                        <img class="featured-img hidden-xs hidden-sm" src="images/menu-pic.jpg" alt="">
+                        <img class="featured-img hidden-xs hidden-sm" src="assets/images/menu-pic.jpg" alt="">
                       </div>
                       <!-- /col -->
                       
