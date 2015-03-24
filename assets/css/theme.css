@@ -8251,12 +8251,3 @@ footer .copyright a {
     display: inline-block;
     vertical-align: top;
 }
-.b-catalog-products.b-products-page .b-product:hover .first-img {
-    display: none;
-}
-.b-catalog-products.b-products-page .b-product .second-img {
-    display: none;
-}
-.b-catalog-products.b-products-page .b-product:hover .second-img {
-    display: block;
-}

@@ -16,8 +16,8 @@
                 <a class="b-product" title="{{ product.title }}" href="{{ product.getUrl() }}">
                     {% set images = product.Images.get() %}
                     <div class="b-product-image">
-                        <img class="first-img zoomOutLeft" src="{{ images.0.getThumb('[215x160]') }}" />
-                        <img class="second-img zoomInRight" src="{{ images.1.getThumb('[215x160]') }}" />
+                        <img class="first-img zoomOutLeft fadeOut" src="{{ images.0.getThumb('[215x160]') }}" />
+                        <img class="second-img zoomInRight fadeIn" src="{{ images.1.getThumb('[215x160]') }}" />
                     </div>
 
                     <span class="h4">{{ product.title }}</span>
