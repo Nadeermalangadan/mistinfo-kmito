@@ -8246,3 +8246,8 @@ footer .copyright a {
 
 
 
+.b-catalog-products.b-products-page .b-product {
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+}

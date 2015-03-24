@@ -1,6 +1,6 @@
 <h1 class="page_title">{{ category.title }}</h1>
 
-<div class="b-catalog-products">
+<div class="b-catalog-products b-products-page">
 {% set categories = category.PublicElements.get(1) %}
 {% if categories|length > 0 %}
 		{% for cat in categories %}
