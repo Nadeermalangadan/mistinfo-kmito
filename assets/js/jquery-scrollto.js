@@ -8,6 +8,7 @@
 	var jQuery, $, ScrollTo;
 	jQuery = $ = window.jQuery || require('jquery');
 
+  $.propHooks = $.propHooks || {};
 	// Fix scrolling animations on html/body on safari
 	$.propHooks.scrollTop = $.propHooks.scrollLeft = {
 		get: function(elem,prop) {
