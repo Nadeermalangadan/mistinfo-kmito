@@ -26,6 +26,8 @@
 			return result;
 		}
 	};
+  $.Tween = $.Tween || {};
+  $.Tween.propHooks = $.Tween.propHooks || {};
 	$.Tween.propHooks.scrollTop = $.Tween.propHooks.scrollLeft = {
 		get: function(tween) {
 			return $.propHooks.scrollTop.get(tween.elem, tween.prop);
