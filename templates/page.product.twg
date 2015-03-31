@@ -1,54 +1,54 @@
 
-          <!-- Product Row -->
-          <div class="row product-details">
+<!-- Product Row -->
+<div class="row product-details">
 
-            <!-- Col -->
-            <div class="col-md-5 mgb-30-xs">
+<!-- Col -->
+<div class="col-md-5 mgb-30-xs">
 
-              <!-- Slider Wrapper -->
-              <div class="main-slider">
-                <!-- BxSlider -->
-                    {% set images = product.Images.get() %}
-                <ul class="bxslider" data-call="bxslider" data-options="{pagerCustom:'#thumb-pager', controls:false}">
-                {% for image in images %}
-                  <li>
-                    <a href="#"><img class="fillw" src="{{ image.getThumb('[500x600]') }}" alt="" /></a>
-                  </li>
-			    {% endfor %}
-                </ul>
-                <!-- /BxSlider -->
-              </div>
-              <!-- /Slider Wrapper -->
+  <!-- Slider Wrapper -->
+  <div class="main-slider">
+    <!-- BxSlider -->
+        {% set images = product.Images.get() %}
+    <ul class="bxslider" data-call="bxslider" data-options="{pagerCustom:'#thumb-pager', controls:false}">
+    {% for image in images %}
+      <li>
+        <a href="#"><img class="fillw" src="{{ image.getThumb('[500x600]') }}" alt="" /></a>
+      </li>
+    {% endfor %}
+    </ul>
+    <!-- /BxSlider -->
+  </div>
+  <!-- /Slider Wrapper -->
 
-              <!-- Slider Wrapper -->
-              <div  class="thumb-slider bx-controls-box">
-                <!-- BxSlider -->
-                <ul id="thumb-pager" class="bxslider" data-call="bxslider" data-options="{pager:false, slides:4, slideMargin:10}">
-                {% for image in images %}
-                  <li>
-                    <a data-slide-index="0" href="#"><img class="fillw" src="{{ image.getThumb('[500x600]') }}" alt="" /></a>
-                  </li>
-			    {% endfor %}
-                </ul>
-                <!-- /BxSlider -->
-              </div>
-              <!-- /Slider Wrapper -->
+  <!-- Slider Wrapper -->
+  <div  class="thumb-slider bx-controls-box">
+    <!-- BxSlider -->
+    <ul id="thumb-pager" class="bxslider" data-call="bxslider" data-options="{pager:false, slides:4, slideMargin:10}">
+    {% for image in images %}
+      <li>
+        <a data-slide-index="0" href="#"><img class="fillw" src="{{ image.getThumb('[500x600]') }}" alt="" /></a>
+      </li>
+    {% endfor %}
+    </ul>
+    <!-- /BxSlider -->
+  </div>
+  <!-- /Slider Wrapper -->
 
-            </div>
-            <!-- /Col -->
+</div>
+<!-- /Col -->
 
-            <!-- Col -->
-            <div class="col-md-7">
+<!-- Col -->
+<div class="col-md-7">
 
-              <h3 class="product-title">{{product.title}}</h3>
+  <h3 class="product-title">{{product.title}}</h3>
 
-              <div class="price-box">
-                <h4 class="product-price">{{ product.getMainPrice('%.2f') }}</h4>
-              </div>
+  <div class="price-box">
+    <h4 class="product-price">{{ product.getMainPrice('%.2f') }}</h4>
+  </div>
 
-              {{product.body|raw}}
-            </div>
-            <!-- /Col -->
+  {{product.description|raw}}
+</div>
+<!-- /Col -->
 
-          </div>
-          <!-- /Product Row -->
+</div>
+<!-- /Product Row -->
