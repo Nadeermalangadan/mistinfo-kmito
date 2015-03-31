@@ -109,6 +109,6 @@
   font-family: "MyriadPro-Regular" !important;
   color: #000;
 }
-header {
+header.header-block {
     height: 180px;
 }
