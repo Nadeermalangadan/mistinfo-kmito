@@ -155,7 +155,11 @@
 	
 
 
-    <div class="content-block">{{ content|raw }}</div>
+    <div class="content-block">
+        <div class="container no-pad-t">
+            {{ content|raw }}
+        </div>
+    </div>
 </div>
 
 
