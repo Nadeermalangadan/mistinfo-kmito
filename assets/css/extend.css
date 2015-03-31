@@ -73,7 +73,7 @@
 
 .navbar-main {
   background: #fff;
-  border: 2px solid #000;
+  border: 2px solid #000 !important;
   min-height: 42px;
 }
 .navbar-dont-collapse .header-search {
@@ -91,6 +91,7 @@
 .navbar-dont-collapse .header-search .form-group input {
 	text-align: right;
 	padding-right: 40px;
+    box-shadow: none;
   border: 0 none;
 }
 .hnav .navbar-dont-collapse .navbar-btn-group {
@@ -100,10 +101,14 @@
 
 .main-header .brand-col {
 	width: 30% !important;
+    padding: 40px 0 0;
 }
 
 .header-text {
   font-size: 18px !important;
   font-family: "MyriadPro-Regular" !important;
   color: #000;
+}
+header {
+    height: 180px;
 }
