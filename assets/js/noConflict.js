@@ -1,1 +1,1 @@
-$.noConflict( true );
+$.noConflict( );
