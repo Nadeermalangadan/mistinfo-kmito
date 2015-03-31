@@ -26,7 +26,7 @@
     <ul id="thumb-pager" class="bxslider" data-call="bxslider" data-options="{pager:false, slides:4, slideMargin:10}">
     {% for image in images %}
       <li>
-        <a data-slide-index="0" href="#"><img class="fillw" src="{{ image.getThumb('[500x600]') }}" alt="" /></a>
+        <a data-slide-index="{{loop.index0}}" href="#"><img class="fillw" src="{{ image.getThumb('[500x600]') }}" alt="" /></a>
       </li>
     {% endfor %}
     </ul>

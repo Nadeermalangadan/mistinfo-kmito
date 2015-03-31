@@ -123,3 +123,7 @@
 header.header-block {
     height: 180px;
 }
+
+.product-details .thumb-slider .bx-controls-direction a.bx-next {
+    background: rgba(19,20,22,0.9) !important;
+}
